@@ -1,0 +1,1924 @@
+/* ==========================================================================
+   HORIZONTE A MEDIDA VIAJES - ESTILO MINIMALISTA, CULTURAL & KAWAII
+   Armonía Wabi-Sabi, espíritu Omotenashi y delicadeza japonesa moderna
+   ========================================================================== */
+
+:root {
+  /* Paleta cromática suave inspirada en Japón */
+  --color-washi-bg: #FAF7F2;      /* Blanco roto papel Washi / Arena Zen */
+  --color-card-bg: #FFFFFF;
+  --color-ink-main: #2D2825;      /* Tinta Sumi-e suave */
+  --color-ink-muted: #786F66;     /* Gris ceniza suave */
+  --color-border: #EFE8DE;        /* Borde papel de arroz */
+  --color-border-hover: #DCD2C3;
+  
+  /* Acentos culturales y kawaii */
+  --color-sakura-pink: #FF758F;   /* Rosa flor de cerezo */
+  --color-sakura-light: #FFF0F3;  /* Pastel sakura */
+  --color-torii-vermilion: #E03131; /* Rojo bermellón Torii */
+  --color-torii-soft: #FFE3E3;
+  --color-matcha: #2B8A3E;        /* Verde té matcha */
+  --color-matcha-light: #EBFBEE;
+  --color-gingko-gold: #F59F00;    /* Amarillo dorado hoja de ginkgo */
+  --color-gingko-light: #FFF9DB;
+  --color-fuji-blue: #3B5BDB;      /* Azul índigo / Monte Fuji */
+  --color-fuji-light: #EDF2FF;
+
+  /* Tipografías */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Radios suaves y cute */
+  --radius-xs: 6px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-full: 9999px;
+
+  /* Sombras etéreas */
+  --shadow-subtle: 0 4px 16px rgba(45, 40, 37, 0.04);
+  --shadow-hover: 0 10px 28px rgba(45, 40, 37, 0.08);
+  --shadow-float: 0 20px 40px rgba(45, 40, 37, 0.12);
+  --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset y base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink-main);
+  background-color: var(--color-washi-bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Sutil patrón de papel washi de fondo */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(45, 40, 37, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Contenedor universal con más aire ("Ma") */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Tipografía minimalista */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-ink-main);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.kanji-watermark {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(224, 49, 49, 0.06);
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+/* Sello Hanko tradicional (判子) */
+.hanko-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--color-torii-vermilion);
+  border-radius: 50%;
+  color: var(--color-torii-vermilion);
+  font-weight: 800;
+  font-size: 0.85rem;
+  background: rgba(224, 49, 49, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(224, 49, 49, 0.3);
+  transform: rotate(-8deg);
+  user-select: none;
+}
+
+.hanko-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: var(--color-torii-soft);
+  color: var(--color-torii-vermilion);
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid rgba(224, 49, 49, 0.2);
+}
+
+/* Botones suaves y cute */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  background-color: var(--color-torii-vermilion);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(224, 49, 49, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #C92A2A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(224, 49, 49, 0.35);
+}
+
+.btn-sakura {
+  background-color: var(--color-sakura-pink);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(255, 117, 143, 0.3);
+}
+
+.btn-sakura:hover {
+  background-color: #F43F5E;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--color-ink-main);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-secondary:hover {
+  background-color: #F8F5EE;
+  border-color: var(--color-border-hover);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-ink-muted);
+  border-color: transparent;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.btn-ghost:hover {
+  background-color: #F3ECE1;
+  color: var(--color-torii-vermilion);
+}
+
+.btn-sm {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.82rem;
+}
+
+.btn-lg {
+  padding: 0.95rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+/* Insignias adorables */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-muted);
+}
+
+/* Animación sutil de pétalos de sakura cayendo */
+@keyframes sakuraFloat {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+.sakura-petal {
+  position: fixed;
+  top: -20px;
+  background: #FFB3C1;
+  border-radius: 150% 0 150% 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+  animation: sakuraFloat 12s linear infinite;
+}
+
+/* ==========================================================================
+   BARRA SUPERIOR Y NAVEGACIÓN MINIMALISTA
+   ========================================================================== */
+.top-notice-bar {
+  background-color: #FAF4EB;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.78rem;
+  padding: 0.45rem 0;
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+}
+
+.top-notice-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+.top-notice-left {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-notice-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.notice-sep {
+  color: #DCD2C3;
+}
+
+.top-notice-bar a {
+  color: var(--color-torii-vermilion);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 247, 242, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: 70px;
+  max-width: 1240px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.brand-hanko {
+  width: 38px;
+  height: 38px;
+  background-color: var(--color-torii-vermilion);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(224, 49, 49, 0.25);
+  font-family: 'Playfair Display', serif;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-ink-main);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.brand-sub {
+  font-size: 0.65rem;
+  color: var(--color-torii-vermilion);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  list-style: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-decoration: none;
+  transition: var(--transition);
+  padding: 0.3rem 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--color-torii-vermilion);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-torii-vermilion);
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-ink-main);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* ==========================================================================
+   HERO SECTION MINIMALISTA & KAWAII
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  padding: 4.5rem 0 5.5rem;
+  background: linear-gradient(180deg, #FAF7F2 0%, #FFFDF9 60%, #FAF7F2 100%);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  line-height: 1.18;
+}
+
+.hero-content h1 span.sakura-text {
+  color: var(--color-torii-vermilion);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-content h1 span.sakura-text::after {
+  content: '🌸';
+  font-size: 1.5rem;
+  vertical-align: super;
+  margin-left: 0.2rem;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  color: var(--color-ink-muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.hero-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Tarjeta Pasaporte / Diario de Viaje Japonés */
+.travel-journal-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-hover);
+  position: relative;
+  transform: rotate(1deg);
+  transition: var(--transition);
+}
+
+.travel-journal-card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: var(--shadow-float);
+}
+
+.journal-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 24px;
+  background: rgba(255, 117, 143, 0.35);
+  backdrop-filter: blur(4px);
+  border-radius: 2px;
+}
+
+.journal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.journal-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.journal-route-pills {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.5rem;
+}
+
+.journal-pill {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.65rem;
+  background: #FAF7F2;
+  border-radius: var(--radius-full);
+  color: var(--color-ink-main);
+  font-weight: 600;
+}
+
+.journal-meta-box {
+  background: #FAF7F2;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.journal-meta-item .label {
+  font-size: 0.72rem;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+}
+
+.journal-meta-item .val {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-ink-main);
+}
+
+/* Métricas limpias */
+.metrics-strip {
+  padding: 2.25rem 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.metric-card {
+  text-align: center;
+  position: relative;
+}
+
+.metric-card:not(:last-child)::after {
+  content: '・';
+  position: absolute;
+  right: -1rem;
+  top: 30%;
+  color: var(--color-border);
+  font-size: 1.5rem;
+}
+
+.metric-val {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-torii-vermilion);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.metric-label {
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 0.15rem;
+}
+
+.metric-desc {
+  font-size: 0.78rem;
+  color: var(--color-ink-muted);
+}
+
+/* ==========================================================================
+   SECCIÓN SPOTLIGHT: AVATAR IA & ASESORA VIRTUAL (AIKO)
+   ========================================================================== */
+.avatar-ia-section {
+  background: #FFFDF9;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-ia-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.avatar-video-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  position: relative;
+  transition: var(--transition);
+}
+
+.avatar-video-card:hover {
+  box-shadow: var(--shadow-float);
+  border-color: var(--color-sakura-pink);
+}
+
+.avatar-video-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  background: rgba(45, 40, 37, 0.78);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.video-container {
+  width: 100%;
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  max-height: 480px;
+  display: block;
+  object-fit: cover;
+  outline: none;
+}
+
+.avatar-video-footer {
+  padding: 1.15rem 1.35rem;
+  background: #FAF7F2;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.avatar-mini-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar-emoji {
+  width: 36px;
+  height: 36px;
+  background: var(--color-sakura-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.avatar-mini-status strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-ink-main);
+  line-height: 1.2;
+}
+
+.avatar-mini-status span {
+  font-size: 0.72rem;
+  color: var(--color-ink-muted);
+}
+
+.avatar-ia-info h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.02em;
+}
+
+.avatar-lead {
+  font-size: 1.02rem;
+  color: var(--color-ink-muted);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.avatar-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 2.25rem;
+}
+
+.avatar-feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.avatar-feature-icon {
+  width: 40px;
+  height: 40px;
+  background: #FAF7F2;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.avatar-feature-item h4 {
+  font-size: 0.95rem;
+  color: var(--color-ink-main);
+  margin-bottom: 0.15rem;
+}
+
+.avatar-feature-item p {
+  font-size: 0.84rem;
+  color: var(--color-ink-muted);
+  line-height: 1.5;
+}
+
+.avatar-actions-row {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   SECCIONES GENERALES & OMOTENASHI (PROCESO)
+   ========================================================================== */
+.section {
+  padding: 5.5rem 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-subheading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-torii-vermilion);
+  margin-bottom: 0.5rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  font-size: 1.02rem;
+  color: var(--color-ink-muted);
+}
+
+/* Las 6 fases presentadas con delicadeza */
+.phases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.phase-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.phase-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-sakura-pink);
+  box-shadow: var(--shadow-hover);
+}
+
+.phase-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.phase-emoji {
+  font-size: 1.75rem;
+}
+
+.phase-badge-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #FAF7F2;
+  color: var(--color-ink-muted);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.phase-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.phase-japanese-concept {
+  font-size: 0.75rem;
+  color: var(--color-torii-vermilion);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.phase-card p {
+  font-size: 0.88rem;
+  color: var(--color-ink-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.phase-result {
+  background: #FAF7F2;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.85rem;
+  font-size: 0.78rem;
+  color: var(--color-ink-main);
+  border-left: 3px solid var(--color-torii-vermilion);
+}
+
+/* ==========================================================================
+   ITINERARIO 10 DÍAS INTERACTIVO MINIMALISTA
+   ========================================================================== */
+.itinerary-box {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+}
+
+/* Barra de variantes */
+.variants-bar {
+  background: #FAF7F2;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.variants-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.variants-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.variant-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.variant-btn:hover {
+  border-color: var(--color-sakura-pink);
+  color: var(--color-torii-vermilion);
+}
+
+.variant-btn.active {
+  background: var(--color-torii-vermilion);
+  border-color: var(--color-torii-vermilion);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(224, 49, 49, 0.25);
+}
+
+/* Banner de la variante seleccionada */
+.variant-banner {
+  background: var(--color-sakura-light);
+  border-bottom: 1px solid #FFE3E3;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.variant-banner h4 {
+  font-size: 0.95rem;
+  color: var(--color-torii-vermilion);
+  margin-bottom: 0.2rem;
+}
+
+.variant-banner p {
+  font-size: 0.82rem;
+  color: #862E2E;
+}
+
+/* Layout día por día */
+.itinerary-layout {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  min-height: 540px;
+}
+
+.days-nav {
+  background: #FAF7F2;
+  border-right: 1px solid var(--color-border);
+  overflow-y: auto;
+  max-height: 620px;
+}
+
+.day-tab-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.25rem;
+  border-bottom: 1px solid rgba(239, 232, 222, 0.6);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.day-tab-item:hover {
+  background: #F3ECE1;
+}
+
+.day-tab-item.active {
+  background: #FFFFFF;
+  border-left: 4px solid var(--color-torii-vermilion);
+}
+
+.day-tab-emoji {
+  font-size: 1.25rem;
+}
+
+.day-tab-info {
+  flex-grow: 1;
+}
+
+.day-tab-base {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-torii-vermilion);
+}
+
+.day-tab-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* Detalle del día */
+.day-detail-content {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.day-detail-header {
+  margin-bottom: 1.25rem;
+}
+
+.day-concept-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--color-matcha-light);
+  color: var(--color-matcha);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.day-detail-title {
+  font-size: 1.55rem;
+  color: var(--color-ink-main);
+  margin-bottom: 0.5rem;
+}
+
+.day-detail-summary {
+  font-size: 0.95rem;
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+}
+
+.day-detail-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+.activities-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.activities-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--color-ink-main);
+}
+
+.activities-list li::before {
+  content: '🌸';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 0.8rem;
+}
+
+.day-image-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 220px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.day-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.day-image-card:hover img {
+  transform: scale(1.04);
+}
+
+.day-detail-footer {
+  background: #FAF7F2;
+  border-radius: var(--radius-sm);
+  padding: 1.15rem 1.35rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  border: 1px solid var(--color-border);
+}
+
+.footer-item {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.footer-item h5 {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+
+.footer-item p {
+  font-size: 0.84rem;
+  color: var(--color-ink-main);
+}
+
+/* ==========================================================================
+   COTIZADOR MINIMALISTA (ESTILO CUADERNO JAPONÉS)
+   ========================================================================== */
+.calc-wrapper {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+}
+
+.calc-form-pane {
+  padding: 2.5rem;
+}
+
+.calc-group {
+  margin-bottom: 1.5rem;
+}
+
+.calc-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-ink-main);
+  margin-bottom: 0.5rem;
+}
+
+.calc-select-btn {
+  background: #FAF7F2;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 0.6rem 0.85rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--color-ink-main);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.calc-select-btn:hover {
+  background: #F3ECE1;
+  border-color: var(--color-border-hover);
+}
+
+.calc-select-btn.active {
+  background: #FFFFFF;
+  border-color: var(--color-torii-vermilion);
+  color: var(--color-torii-vermilion);
+  box-shadow: 0 0 0 2px rgba(224, 49, 49, 0.15);
+}
+
+.grid-options-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+.grid-options-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+.grid-options-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; }
+
+/* Addons en lista limpia */
+.addon-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #FAF7F2;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 0.5rem;
+}
+
+.addon-card:hover {
+  background: #F3ECE1;
+}
+
+.addon-card.active {
+  background: var(--color-sakura-light);
+  border-color: #FFC9C9;
+}
+
+.addon-card input[type="checkbox"] {
+  accent-color: var(--color-torii-vermilion);
+  width: 18px;
+  height: 18px;
+}
+
+.addon-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-main);
+}
+
+.addon-desc {
+  font-size: 0.74rem;
+  color: var(--color-ink-muted);
+}
+
+.addon-price {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-torii-vermilion);
+}
+
+/* Panel de desglose con sello Hanko */
+.calc-summary-pane {
+  background: #FAF7F2;
+  border-left: 1px solid var(--color-border);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  margin-bottom: 0.65rem;
+}
+
+.breakdown-row .val {
+  font-weight: 600;
+  color: var(--color-ink-main);
+}
+
+.total-box-cute {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+}
+
+.total-per-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+
+.total-per-person .price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-torii-vermilion);
+}
+
+.preventive-tip {
+  background: var(--color-gingko-light);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.76rem;
+  color: #7D5A00;
+  border: 1px solid #FFE066;
+  margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   ALOJAMIENTOS Y TRADICIÓN (RYOKAN & ONSEN)
+   ========================================================================== */
+.accommodations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.accom-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.accom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-sakura-pink);
+}
+
+.accom-img-wrap {
+  position: relative;
+  height: 190px;
+}
+
+.accom-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.accom-badge-cute {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-ink-main);
+  border: 1px solid var(--color-border);
+}
+
+.accom-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.accom-japanese-tag {
+  font-size: 0.72rem;
+  color: var(--color-torii-vermilion);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.accom-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.accom-price-line {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-ink-main);
+  margin-bottom: 0.75rem;
+}
+
+.accom-desc {
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.accom-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: auto;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.85rem;
+}
+
+.accom-features li {
+  font-size: 0.78rem;
+  color: var(--color-ink-main);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Banner de etiqueta en Ryokan & Onsen */
+.onsen-etiquette-box {
+  margin-top: 3rem;
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.onsen-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.onsen-rule-item {
+  background: #FAF7F2;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.onsen-rule-item h5 {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: var(--color-ink-main);
+}
+
+.onsen-rule-item p {
+  font-size: 0.78rem;
+  color: var(--color-ink-muted);
+}
+
+/* ==========================================================================
+   GUÍA RAG & REQUISITOS (ACORDEÓN MINIMALISTA)
+   ========================================================================== */
+.rag-accordion {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rag-faq-item {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.rag-faq-item:hover {
+  border-color: var(--color-sakura-pink);
+}
+
+.rag-faq-header {
+  padding: 1.15rem 1.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink-main);
+  user-select: none;
+}
+
+.rag-faq-body {
+  padding: 0 1.35rem 1.15rem;
+  font-size: 0.88rem;
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+  display: none;
+}
+
+.rag-faq-item.open .rag-faq-body {
+  display: block;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 0.85rem;
+}
+
+.rag-faq-icon {
+  font-size: 0.9rem;
+  color: var(--color-torii-vermilion);
+  transition: transform 0.25s ease;
+}
+
+.rag-faq-item.open .rag-faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Tabla de cancelación */
+.cancellation-wrap {
+  margin-top: 2.5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cancellation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.cancellation-table th, .cancellation-table td {
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cancellation-table th {
+  background: #FAF7F2;
+  color: var(--color-ink-main);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   FORMULARIO: TABLILLA EMA DE DESEOS DE VIAJE (絵馬)
+   ========================================================================== */
+.ema-sanctuary-wrap {
+  background: linear-gradient(180deg, #FFFDF9 0%, #FAF7F2 100%);
+  border: 2px dashed #E3D7C5;
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2.5rem;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: var(--shadow-subtle);
+}
+
+.ema-knot-top {
+  width: 50px;
+  height: 50px;
+  background: var(--color-torii-vermilion);
+  border-radius: 50%;
+  margin: -60px auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(224, 49, 49, 0.3);
+}
+
+.ema-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ema-header h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.form-field {
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--color-ink-main);
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--color-ink-main);
+  transition: var(--transition);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--color-torii-vermilion);
+  box-shadow: 0 0 0 3px rgba(224, 49, 49, 0.12);
+}
+
+/* ==========================================================================
+   AIKO-CHAN: ASISTENTE VIRTUAL KAWAII
+   ========================================================================== */
+.chatbot-launcher {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+.chatbot-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-torii-vermilion) 0%, var(--color-sakura-pink) 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(224, 49, 49, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.chatbot-badge-live {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #10B981;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.chatbot-window {
+  position: fixed;
+  bottom: 95px;
+  right: 24px;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  height: 520px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-float);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.95) translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chatbot-window.open {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.chat-header {
+  background: #FAF7F2;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.chat-avatar-cute {
+  width: 36px;
+  height: 36px;
+  background: var(--color-sakura-light);
+  border: 1px solid #FFC9C9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.chat-user-box h4 {
+  font-size: 0.92rem;
+  color: var(--color-ink-main);
+}
+
+.chat-user-box span {
+  font-size: 0.7rem;
+  color: var(--color-matcha);
+  font-weight: 600;
+}
+
+.chat-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #FFFDF9;
+}
+
+.chat-msg {
+  max-width: 85%;
+  padding: 0.7rem 0.95rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.chat-msg.bot {
+  align-self: flex-start;
+  background: #FAF7F2;
+  color: var(--color-ink-main);
+  border: 1px solid var(--color-border);
+  border-bottom-left-radius: 2px;
+}
+
+.chat-msg.user {
+  align-self: flex-end;
+  background: var(--color-torii-vermilion);
+  color: #FFFFFF;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-quick-pills {
+  padding: 0.5rem 0.75rem;
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 0.35rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.quick-pill {
+  font-size: 0.72rem;
+  background: #FAF7F2;
+  color: var(--color-ink-main);
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+.quick-pill:hover {
+  background: #F3ECE1;
+  border-color: var(--color-sakura-pink);
+}
+
+.chat-input-bar {
+  padding: 0.65rem 0.85rem;
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input-field {
+  flex-grow: 1;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  outline: none;
+}
+
+.chat-send-btn {
+  width: 34px;
+  height: 34px;
+  background: var(--color-torii-vermilion);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   FOOTER MINIMALISTA JAPONÉS
+   ========================================================================== */
+footer.minimal-footer {
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  padding: 4.5rem 0 2rem;
+  color: var(--color-ink-muted);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-col h4 {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--color-ink-main);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.84rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--color-ink-muted);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--color-torii-vermilion);
+  padding-left: 3px;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Media Queries Responsivos */
+@media (max-width: 1160px) {
+  .nav-links {
+    gap: 0.95rem;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+  .top-notice-left {
+    display: none;
+  }
+  .top-notice-inner {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-links, .nav-actions .btn-ghost {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .top-notice-left {
+    display: none;
+  }
+  .top-notice-inner {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .avatar-ia-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .itinerary-layout { grid-template-columns: 1fr; }
+  .days-nav { display: flex; overflow-x: auto; max-height: none; border-right: none; border-bottom: 1px solid var(--color-border); }
+  .day-tab-item { flex-shrink: 0; min-width: 170px; border-bottom: none; border-right: 1px solid var(--color-border); }
+  .day-tab-item.active { border-left: none; border-bottom: 4px solid var(--color-torii-vermilion); }
+  .calc-wrapper { grid-template-columns: 1fr; }
+  .accommodations-grid, .phases-grid { grid-template-columns: repeat(2, 1fr); }
+  .onsen-etiquette-box { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2.35rem; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .metric-card:not(:last-child)::after { display: none; }
+  .accommodations-grid, .phases-grid, .onsen-rules-grid { grid-template-columns: 1fr; }
+  .grid-options-3, .grid-options-4 { grid-template-columns: repeat(2, 1fr); }
+  .day-detail-grid { grid-template-columns: 1fr; }
+  .day-detail-footer { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+}

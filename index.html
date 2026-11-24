@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte a Medida Viajes | Rutas Personalizadas a Japón</title>
+  <meta name="description" content="Viajes personalizados a Japón a tu propio ritmo. Hospitalidad Omotenashi, hoteles seleccionados, tren bala reservado y asistencia 24h en español.">
+  
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23E03131%22/><text y=%2250%22 font-size=%2260%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22>旅</text></svg>">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR DE AVISOS Y OMOTENASHI -->
+  <div class="top-notice-bar">
+    <div class="container top-notice-inner">
+      <div class="top-notice-left">
+        <span>🌸 Especialistas en Japón • Salidas desde España • Rutas 100% a medida</span>
+      </div>
+      <div class="top-notice-right">
+        <span>🍵 <strong>Omotenashi:</strong> Asistencia 24h en ruta</span>
+        <span class="notice-sep">•</span>
+        <a href="tel:+34910234567">📞 910 234 567</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR DE NAVEGACIÓN MINIMALISTA Y ORDENADA -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-hanko">旅</div>
+        <div class="brand-text">
+          <span class="brand-title">HORIZONTE</span>
+          <span class="brand-sub">VIAJES A JAPÓN</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#asesora-ia">Asesora IA 🌸</a></li>
+        <li><a href="#itinerario">Ruta 10 Días</a></li>
+        <li><a href="#variantes">Variantes</a></li>
+        <li><a href="#cotizador">Cotizador</a></li>
+        <li><a href="#alojamientos">Hoteles & Ryokan</a></li>
+        <li><a href="#proceso">Cómo Trabajamos</a></li>
+        <li><a href="#guia-rag">Requisitos</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contacto" class="btn btn-ghost btn-sm">Pedir Cita</a>
+        <a href="#cotizador" class="btn btn-primary btn-sm">Diseñar Mi Viaje 🌸</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN HERO: MINIMALISTA, SERENA Y KAWAII -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badges-row">
+          <span class="pill-badge">🌸 Especialistas en Japón</span>
+          <span class="pill-badge">✈️ Salidas desde España</span>
+          <span class="pill-badge">🍵 Asistencia 24h en Español</span>
+        </div>
+        <h1>
+          Japón a tu propio ritmo, <br>
+          con la delicadeza de lo <span class="sakura-text">hecho a medida</span>
+        </h1>
+        <p class="hero-lead">
+          Olvídate de las prisas en grupo. Diseñamos tu experiencia con la filosofía <em>Wabi-Sabi</em> y la hospitalidad <em>Omotenashi</em>: hoteles con encanto, tren bala sin estrés, noche en ryokan tradicional y un equipo experto a tu lado las 24 horas.
+        </p>
+        <div class="hero-actions">
+          <a href="#cotizador" class="btn btn-primary btn-lg">
+            ⚡ Calcular Presupuesto en Vivo
+          </a>
+          <a href="#asesora-ia" class="btn btn-secondary btn-lg">
+            ▶ Conoce a Aiko en Vídeo 🎥
+          </a>
+        </div>
+      </div>
+
+      <!-- Cuaderno de Viaje Adorable (Travel Journal Card) -->
+      <div class="travel-journal-card">
+        <div class="journal-tape"></div>
+        <div class="journal-header">
+          <span class="hanko-badge">Ruta Recomendada</span>
+          <div class="hanko-seal">済</div>
+        </div>
+        <h3 class="journal-title">Japón Esencial & Tradición</h3>
+        <p style="font-size: 0.88rem; color: #786F66;">10 días / 9 noches • Tokio, Monte Fuji, Kioto, Nara y Osaka</p>
+        
+        <div class="journal-route-pills">
+          <span class="journal-pill">🌆 Tokio</span>
+          <span class="journal-pill">➔</span>
+          <span class="journal-pill">♨️ Hakone Ryokan</span>
+          <span class="journal-pill">➔</span>
+          <span class="journal-pill">⛩️ Kioto</span>
+          <span class="journal-pill">➔</span>
+          <span class="journal-pill">🦌 Nara & Osaka</span>
+        </div>
+
+        <div class="journal-meta-box">
+          <div class="journal-meta-item">
+            <div class="label">Duración</div>
+            <div class="val">10 Días / 9 Noches</div>
+          </div>
+          <div class="journal-meta-item">
+            <div class="label">Experiencia Clave</div>
+            <div class="val">Onsen & Kaiseki ♨️</div>
+          </div>
+          <div class="journal-meta-item">
+            <div class="label">Movilidad Ligera</div>
+            <div class="val">Shinkansen + Takkyubin 📦</div>
+          </div>
+          <div class="journal-meta-item">
+            <div class="label">Depósito Inicial</div>
+            <div class="val">Solo 30% al reservar</div>
+          </div>
+        </div>
+
+        <div style="background: #FFF0F3; border-radius: 12px; padding: 0.85rem 1rem; margin-bottom: 1.25rem; border: 1px solid #FFE3E3;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <span style="font-size: 0.82rem; color: #862E2E;">Estimación orientativa desde:</span>
+            <strong style="color: #E03131; font-size: 1.25rem;">2.480 € / persona</strong>
+          </div>
+          <span style="font-size: 0.72rem; color: #786F66;">Vuelos, hoteles confort, tren bala, ryokan y seguro incluidos</span>
+        </div>
+
+        <a href="#itinerario" class="btn btn-sakura" style="width: 100%;">
+          Ver Día a Día de la Ruta 🌸
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTRICAS DE CONFIANZA -->
+  <section class="metrics-strip">
+    <div class="container metrics-grid">
+      <div class="metric-card">
+        <div class="metric-val">100%</div>
+        <div class="metric-label">A Tu Medida</div>
+        <div class="metric-desc">Sin grupos masivos. Tu propio ritmo y estilo.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">24/7</div>
+        <div class="metric-label">Omotenashi</div>
+        <div class="metric-desc">Asistencia directa en español ante imprevistos.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">+1.400</div>
+        <div class="metric-label">Viajeros Felices</div>
+        <div class="metric-desc">99,4% de satisfacción en rutas por Japón.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">30%</div>
+        <div class="metric-label">Depósito Flexible</div>
+        <div class="metric-desc">Reserva tranquila y resto 45 días antes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SPOTLIGHT: ASESORA VIRTUAL CON INTELIGENCIA ARTIFICIAL (AVATAR IA) -->
+  <section class="section avatar-ia-section" id="asesora-ia">
+    <div class="container">
+      <div class="avatar-ia-grid">
+        <!-- Columna del reproductor de vídeo -->
+        <div class="avatar-video-wrapper">
+          <div class="avatar-video-card">
+            <div class="avatar-video-badge">
+              <span class="live-dot"></span> Aiko • Asesora Virtual IA
+            </div>
+            <div class="video-container">
+              <video id="avatarVideo" controls playsinline preload="metadata">
+                <source src="assets/avatar-ia.mp4" type="video/mp4">
+                <source src="AVATAR IA.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de vídeo.
+              </video>
+            </div>
+            <div class="avatar-video-footer">
+              <div class="avatar-mini-status">
+                <div class="avatar-emoji">🌸</div>
+                <div>
+                  <strong>Aiko (あいこ)</strong>
+                  <span>Entrenada con la base de conocimiento oficial de Japón</span>
+                </div>
+              </div>
+              <button class="btn btn-sakura btn-sm" onclick="openChatAndAsk('¡Hola Aiko! He visto tu vídeo de presentación y me gustaría que me orientes sobre mi viaje a Japón')">
+                Hablar con ella 💬
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de información y beneficios -->
+        <div class="avatar-ia-info">
+          <div class="section-subheading">
+            <span>🌸 Innovación & Omotenashi</span>
+          </div>
+          <h2>Conoce a Aiko, tu Asesora con Inteligencia Artificial</h2>
+          <p class="avatar-lead">
+            Para ofrecerte una atención inmediata y personalizada las 24 horas del día, hemos desarrollado a <strong>Aiko</strong>: nuestra asesora virtual dotada de IA conversacional y entrenada rigurosamente con todos los protocolos operativos, tarifas y normativas de Japón.
+          </p>
+
+          <div class="avatar-features-list">
+            <div class="avatar-feature-item">
+              <div class="avatar-feature-icon">⛩️</div>
+              <div>
+                <h4>Conocimiento Oficial & Verificado</h4>
+                <p>Resuelve al instante consultas sobre visados (MAEC), normativa de equipaje Takkyubin en el Shinkansen, vacunas y seguro de viaje.</p>
+              </div>
+            </div>
+
+            <div class="avatar-feature-item">
+              <div class="avatar-feature-icon">🧮</div>
+              <div>
+                <h4>Pre-cotización a Medida en Segundos</h4>
+                <p>Te ayuda a explorar presupuestos desglosados y adaptar la ruta de 10 días a tu estilo (Confort, Premium, Foodie o Relajado).</p>
+              </div>
+            </div>
+
+            <div class="avatar-feature-item">
+              <div class="avatar-feature-icon">🤝</div>
+              <div>
+                <h4>Conexión Fluida con Asesores Humanos</h4>
+                <p>Cuando lo desees, Aiko transfiere tu expediente a nuestros especialistas en Madrid para emitir tu propuesta formal y cerrar la reserva.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="avatar-actions-row">
+            <button class="btn btn-primary btn-lg" onclick="openChatAndAsk('Quiero saber cómo planificar mi viaje a Japón')">
+              Iniciar Conversación con Aiko 🌸
+            </button>
+            <a href="#cotizador" class="btn btn-secondary btn-lg">
+              Calcular Presupuesto 🧮
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: EL ARTE DEL VIAJE A MEDIDA (OMOTENASHI Y LAS 6 FASES) -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subheading">🎐 El Método Horizonte</span>
+        <h2>El arte de planificar con calma y transparencia</h2>
+        <p>Inspirados en la artesanía japonesa (<em>Monozukuri</em>) y el respeto a tus tiempos, te guiamos en 6 pasos sin sorpresas ni costes ocultos.</p>
+      </div>
+
+      <div class="phases-grid">
+        <div class="phase-card">
+          <div class="phase-top">
+            <span class="phase-emoji">🎋</span>
+            <span class="phase-badge-num">Paso 01</span>
+          </div>
+          <h3>Descubrimiento</h3>
+          <div class="phase-japanese-concept">Kikubari (気配り) • Atención a cada detalle</div>
+          <p>Escuchamos tu ciudad de salida en España, fechas, presupuesto, ritmo deseado y si viajas en pareja, con peques o en solitario.</p>
+          <div class="phase-result"><strong>Resultado:</strong> Ficha de viaje única y personalizada.</div>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-top">
+            <span class="phase-emoji">🗺️</span>
+            <span class="phase-badge-num">Paso 02</span>
+          </div>
+          <h3>Diseño de Ruta</h3>
+          <div class="phase-japanese-concept">Takumi (匠) • Diseño artesanal</div>
+          <p>Seleccionamos la secuencia perfecta de noches, transportes en tren bala y actividades para evitar correr de un lado a otro.</p>
+          <div class="phase-result"><strong>Resultado:</strong> Itinerario preliminar equilibrado.</div>
+        </div>
+
+        <div class="phase-card" style="border-color: var(--color-torii-vermilion); box-shadow: var(--shadow-subtle);">
+          <div class="phase-top">
+            <span class="phase-emoji">🧮</span>
+            <span class="phase-badge-num" style="background: var(--color-torii-soft); color: var(--color-torii-vermilion);">Paso 03</span>
+          </div>
+          <h3>Pre-cotización Clara</h3>
+          <div class="phase-japanese-concept">Meikaku (明確) • Transparencia total</div>
+          <p>Desglosamos en tiempo real vuelos, alojamientos, pases de tren, seguro y honorarios fijos, junto con un margen preventivo de bolsillo.</p>
+          <div class="phase-result"><strong>Resultado:</strong> Estimación orientativa desglosada.</div>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-top">
+            <span class="phase-emoji">⛩️</span>
+            <span class="phase-badge-num">Paso 04</span>
+          </div>
+          <h3>Validación Humana</h3>
+          <div class="phase-japanese-concept">Kakunin (確認) • Verificación rigurosa</div>
+          <p>Nuestros corresponsales en Japón verifican disponibilidad de ryokans, hoteles y billetes de alta velocidad antes de formalizar nada.</p>
+          <div class="phase-result"><strong>Resultado:</strong> Propuesta vinculante garantizada.</div>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-top">
+            <span class="phase-emoji">🌸</span>
+            <span class="phase-badge-num">Paso 05</span>
+          </div>
+          <h3>Reserva Serena</h3>
+          <div class="phase-japanese-concept">Anshin (安心) • Máxima tranquilidad</div>
+          <p>Confirmación con un depósito del 30% y contrato oficial de viaje combinado con condiciones claras de cancelación.</p>
+          <div class="phase-result"><strong>Resultado:</strong> Servicios bloqueados con garantía.</div>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-top">
+            <span class="phase-emoji">🍵</span>
+            <span class="phase-badge-num">Paso 06</span>
+          </div>
+          <h3>Omotenashi en Ruta</h3>
+          <div class="phase-japanese-concept">Omotenashi (おもてなし) • Hospitalidad total</div>
+          <p>Dossier completo con reservas, billetes, tarjetas de metro, eSIM y nuestra línea directa 24h en español durante todo el viaje.</p>
+          <div class="phase-result"><strong>Resultado:</strong> Viaje fluido y asistencia continua.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ITINERARIO ESTRELLA: 10 DÍAS -->
+  <section class="section" style="background: #FFFDF9; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" id="itinerario">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subheading">🌸 Itinerario Estrella</span>
+        <h2>Japón en 10 Días: El Viaje Inolvidable</h2>
+        <p>Un recorrido equilibrado con transporte público eficiente, templos de ensueño y noche de ryokan con onsen. Explora día a día o cambia la variante según tus pasiones.</p>
+      </div>
+
+      <div class="itinerary-box" id="variantes">
+        <!-- Barra de Variantes -->
+        <div class="variants-bar">
+          <span class="variants-title">✨ Selecciona tu Variante:</span>
+          <div class="variants-pills">
+            <button class="variant-btn active" data-variant="clasico">🌸 Ruta Equilibrada (10d)</button>
+            <button class="variant-btn" data-variant="cultura">⛩️ Más Cultura & Castillos</button>
+            <button class="variant-btn" data-variant="familias">🧸 Familias con Peques</button>
+            <button class="variant-btn" data-variant="gastronomia">🍣 Foodie & Sake</button>
+            <button class="variant-btn" data-variant="anime">🎮 Anime & Arcades</button>
+            <button class="variant-btn" data-variant="relajado">🍃 Slow Travel Zen</button>
+          </div>
+        </div>
+
+        <!-- Banner dinámico -->
+        <div id="variantBanner" class="variant-banner">
+          <div>
+            <h4>🌸 Ruta Equilibrada (10 Días) — <span style="font-weight: normal; font-size: 0.85rem;">El balance idóneo para una primera vez</span></h4>
+            <p style="margin-top: 0.2rem;">Tokio (4 noches), Hakone en Ryokan con onsen (1 noche), Kioto (3 noches) y Osaka con Nara (1 noche).</p>
+            <div style="font-size: 0.78rem; color: #E03131; margin-top: 0.35rem; font-weight: 600;">
+              🌸 Ritmo sereno &nbsp;•&nbsp; 🌸 Noche mágica en Ryokan &nbsp;•&nbsp; 🌸 Tren bala Shinkansen &nbsp;•&nbsp; 🌸 Asistencia 24h
+            </div>
+          </div>
+          <a href="#cotizador" class="btn btn-primary btn-sm">Cotizar esta variante 🍡</a>
+        </div>
+
+        <!-- Layout de navegación Día por Día -->
+        <div class="itinerary-layout">
+          <div class="days-nav" id="daysNav">
+            <!-- Rellenado por app.js -->
+          </div>
+
+          <div class="day-detail-content" id="dayDetailContainer">
+            <!-- Rellenado por app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN COTIZADOR EN VIVO: ESTILO CUADERNO JAPONÉS -->
+  <section class="section" id="cotizador">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subheading">🧮 Transparencia Total</span>
+        <h2>Cotizador de Viaje a Medida</h2>
+        <p>Configura las variables esenciales de tu ruta y obtén una pre-cotización orientativa instantánea desglosada por partidas según la Ficha Operativa RAG.</p>
+      </div>
+
+      <div class="calc-wrapper">
+        <!-- Panel de Formulario -->
+        <div class="calc-form-pane">
+          <div class="calc-group">
+            <label class="calc-label">1. Aeropuerto de Salida en España:</label>
+            <div class="grid-options-3" id="departure-btns">
+              <button class="calc-select-btn active" data-val="madrid">Madrid (MAD)</button>
+              <button class="calc-select-btn" data-val="barcelona">Barcelona (BCN)</button>
+              <button class="calc-select-btn" data-val="otra">Valencia / Otra</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">2. Temporada del Viaje:</label>
+            <div class="grid-options-4" id="season-btns">
+              <button class="calc-select-btn" data-val="primavera">🌸 Primavera (Sakura)</button>
+              <button class="calc-select-btn active" data-val="otono">🍁 Otoño (Momiji)</button>
+              <button class="calc-select-btn" data-val="verano">🏮 Verano (Matsuris)</button>
+              <button class="calc-select-btn" data-val="invierno">❄️ Invierno (Nieve)</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">3. Número de Viajeros:</label>
+            <div class="grid-options-4" id="adults-btns">
+              <button class="calc-select-btn" data-val="1">1 Persona</button>
+              <button class="calc-select-btn active" data-val="2">2 Personas (Pareja)</button>
+              <button class="calc-select-btn" data-val="3">3 Personas</button>
+              <button class="calc-select-btn" data-val="4">4 Personas / Familia</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">4. Estilo y Categoría de Alojamiento:</label>
+            <div class="grid-options-4" id="style-btns">
+              <button class="calc-select-btn" data-val="esencial">Esencial (2-3*)</button>
+              <button class="calc-select-btn active" data-val="confort">Confort (3-4*)</button>
+              <button class="calc-select-btn" data-val="premium">Premium (4-5*)</button>
+              <button class="calc-select-btn" data-val="lujo">Lujo & Ryokan</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">5. Ritmo del Viaje:</label>
+            <div class="grid-options-3" id="pace-btns">
+              <button class="calc-select-btn" data-val="relajado">Relajado (Slow)</button>
+              <button class="calc-select-btn active" data-val="equilibrado">Equilibrado</button>
+              <button class="calc-select-btn" data-val="intenso">Intenso (Ver Todo)</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label class="calc-label">6. Experiencias & Servicios Especiales:</label>
+            
+            <label class="addon-card active">
+              <input type="checkbox" data-addon="ryokan" checked>
+              <div style="flex-grow: 1;">
+                <div class="addon-title">♨️ Noche en Ryokan Tradicional con Onsen & Kaiseki</div>
+                <div class="addon-desc">Tatami, aguas termales bajo las estrellas y alta cocina de autor</div>
+              </div>
+              <div class="addon-price">+240 €/hab</div>
+            </label>
+
+            <label class="addon-card active">
+              <input type="checkbox" data-addon="takkyubin" checked>
+              <div style="flex-grow: 1;">
+                <div class="addon-title">📦 Envío de Maletas Takkyubin (Hotel a Hotel)</div>
+                <div class="addon-desc">Viaja ligero en el tren bala sin cargar maletas pesadas</div>
+              </div>
+              <div class="addon-price">+45 €/pax</div>
+            </label>
+
+            <label class="addon-card active">
+              <input type="checkbox" data-addon="shinkansen" checked>
+              <div style="flex-grow: 1;">
+                <div class="addon-title">🚅 Shinkansen Asientos Reservados + Tarjeta IC Metro</div>
+                <div class="addon-desc">Desplazamientos directos, rápidos y sin hacer colas</div>
+              </div>
+              <div class="addon-price">Incluido</div>
+            </label>
+
+            <label class="addon-card active">
+              <input type="checkbox" data-addon="insurance" checked>
+              <div style="flex-grow: 1;">
+                <div class="addon-title">🛡️ Seguro Médico Internacional + Cancelación</div>
+                <div class="addon-desc">Asistencia médica de alta cobertura y anulación justificada</div>
+              </div>
+              <div class="addon-price">+92 €/pax</div>
+            </label>
+
+            <label class="addon-card">
+              <input type="checkbox" data-addon="guide">
+              <div style="flex-grow: 1;">
+                <div class="addon-title">🎎 Día Completo con Guía Privado Oficial Hispanohablante</div>
+                <div class="addon-desc">En Kioto o Tokio para descubrir callejones y leyendas</div>
+              </div>
+              <div class="addon-price">+320 € total</div>
+            </label>
+
+            <label class="addon-card active">
+              <input type="checkbox" data-addon="esim" checked>
+              <div style="flex-grow: 1;">
+                <div class="addon-title">📶 Conectividad eSIM con Datos Ilimitados en Japón</div>
+                <div class="addon-desc">Internet ininterrumpido en todo el país sin cambiar de SIM</div>
+              </div>
+              <div class="addon-price">+28 €/pax</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Panel de Desglose de Pre-cotización -->
+        <div class="calc-summary-pane">
+          <div>
+            <div class="summary-header">
+              <div>
+                <span class="hanko-badge" style="margin-bottom: 0.35rem;">Fase 3 • Pre-cotización</span>
+                <h3 style="font-size: 1.25rem;">Desglose Estimado</h3>
+                <p style="font-size: 0.8rem; color: #786F66;">Cálculo según directrices operativas.</p>
+              </div>
+              <div class="hanko-seal" title="Estimación revisada por Horizonte">済</div>
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <div class="breakdown-row">
+                <span>✈️ Vuelos internacionales:</span>
+                <span class="val" id="summaryFlights">1.900 € (950 €/pax)</span>
+              </div>
+              <div class="breakdown-row">
+                <span>🏨 Alojamientos (10 noches):</span>
+                <span class="val" id="summaryHotels">1.400 €</span>
+              </div>
+              <div class="breakdown-row">
+                <span>🚅 Transportes & Tarjeta IC:</span>
+                <span class="val" id="summaryTransport">270 €</span>
+              </div>
+              <div class="breakdown-row">
+                <span>👘 Extras & Ryokan:</span>
+                <span class="val" id="summaryAddons">386 €</span>
+              </div>
+              <div class="breakdown-row">
+                <span>🛡️ Seguro médico internacional:</span>
+                <span class="val" id="summaryInsurance">184 €</span>
+              </div>
+              <div class="breakdown-row">
+                <span>📋 Diseño, gestión & soporte 24h:</span>
+                <span class="val" id="summaryDesignFee">180 €</span>
+              </div>
+            </div>
+
+            <div class="total-box-cute">
+              <div class="total-per-person">
+                <span style="font-size: 0.78rem; text-transform: uppercase; color: #786F66;">Estimación / persona:</span>
+                <span class="price" id="totalPricePerPerson">2.160 €</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; color: #786F66; border-top: 1px dashed #EFE8DE; padding-top: 0.4rem;">
+                <span>Total estimación viaje:</span>
+                <strong id="totalPriceOverall" style="color: #2D2825;">4.320 €</strong>
+              </div>
+            </div>
+
+            <div class="preventive-tip" id="preventiveMarginText">
+              🍙 Margen preventivo sugerido: ~220 € por persona (10-15% del presupuesto terrestre) para degustaciones y recuerdos.
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size: 0.74rem; color: #786F66; margin-bottom: 1rem; line-height: 1.4;">
+              * Esta estimación orientativa no bloquea plazas ni constituye oferta vinculante. Nuestros agentes validarán plazas reales para emitir tu propuesta formal.
+            </p>
+            <a href="#contacto" class="btn btn-primary" style="width: 100%;">
+              Solicitar Esta Propuesta Formal 🌸
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ALOJAMIENTOS & RYOKAN (Sección 8 del PDF) -->
+  <section class="section" id="alojamientos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subheading">♨️ Dónde Descansar</span>
+        <h2>Alojamientos con Encanto y Ryokan Tradicional</h2>
+        <p>En Japón el tamaño de habitación y las normas culturales son particulares. Te asesoramos con total transparencia en metros cuadrados, camas occidentales y la vivencia en aguas termales.</p>
+      </div>
+
+      <div class="accommodations-grid">
+        <!-- Esencial -->
+        <div class="accom-card">
+          <div class="accom-img-wrap">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Hotel Esencial Japón" loading="lazy">
+            <span class="accom-badge-cute">Económico</span>
+          </div>
+          <div class="accom-body">
+            <span class="accom-japanese-tag">シンプル • Funcional</span>
+            <h3>Categoría Esencial</h3>
+            <div class="accom-price-line">70 € - 100 € / noche</div>
+            <p class="accom-desc">Hostales seleccionados y hoteles sencillos de impecable limpieza japonesa, baño privado y ubicación práctica junto al metro.</p>
+            <ul class="accom-features">
+              <li>🌸 Habitaciones compactas de 12 a 15 m²</li>
+              <li>🌸 Limpieza rigurosa e insuperable</li>
+              <li>🌸 Excelente para ajustar presupuesto</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Confort -->
+        <div class="accom-card" style="border-color: #FFC9C9; box-shadow: var(--shadow-subtle);">
+          <div class="accom-img-wrap">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Confort Japón" loading="lazy">
+            <span class="accom-badge-cute" style="color: #E03131; border-color: #FFC9C9;">🌸 Más Elegida</span>
+          </div>
+          <div class="accom-body">
+            <span class="accom-japanese-tag">快適 • El Estándar Perfecto</span>
+            <h3>Categoría Confort</h3>
+            <div class="accom-price-line">120 € - 180 € / noche</div>
+            <p class="accom-desc">El balance preferido: hoteles modernos de 3-4 estrellas, espacio para abrir maletas (18-24 m²), desayuno buffet y cercanía a estaciones clave.</p>
+            <ul class="accom-features">
+              <li>🌸 Habitaciones más amplias y luminosas</li>
+              <li>🌸 Desayunos con opciones occidentales</li>
+              <li>🌸 Ubicación privilegiada en Shinjuku o Kioto</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="accom-card">
+          <div class="accom-img-wrap">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Hotel Premium Japón" loading="lazy">
+            <span class="accom-badge-cute">✨ Superior</span>
+          </div>
+          <div class="accom-body">
+            <span class="accom-japanese-tag">上質 • Alta Gama</span>
+            <h3>Categoría Premium</h3>
+            <div class="accom-price-line">220 € - 380 € / noche</div>
+            <p class="accom-desc">Alojamientos de 4-5 estrellas con vistas panorámicas al horizonte de Tokio o jardines de Kioto, conserjería selecta y spas de diseño.</p>
+            <ul class="accom-features">
+              <li>🌸 Espaciosas habitaciones de 30-45 m²</li>
+              <li>🌸 Camas King size y pisos panorámicos</li>
+              <li>🌸 Conserjería para reservas exclusivas</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tradicional Ryokan -->
+        <div class="accom-card" style="border-color: var(--color-torii-vermilion);">
+          <div class="accom-img-wrap">
+            <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" alt="Ryokan con Onsen Japón" loading="lazy">
+            <span class="accom-badge-cute" style="background: var(--color-torii-soft); color: var(--color-torii-vermilion);">♨️ Experiencia Única</span>
+          </div>
+          <div class="accom-body">
+            <span class="accom-japanese-tag">旅館 • Tradición Sagrada</span>
+            <h3>Tradicional (Ryokan)</h3>
+            <div class="accom-price-line">300 € - 550 € / noche (Media Pensión)</div>
+            <p class="accom-desc">Dormir sobre suelo de tatami y mullido futón de algodón, vestirse con yukata, bañarse en aguas termales onsen y degustar una cena Kaiseki de autor.</p>
+            <ul class="accom-features">
+              <li>🌸 Hospitalidad Omotenashi cuidada al milímetro</li>
+              <li>🌸 Baños termales onsen volcánicos</li>
+              <li>🌸 Cena Kaiseki de múltiples platos incluida</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Familias -->
+        <div class="accom-card">
+          <div class="accom-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" alt="Apartahotel Familias Japón" loading="lazy">
+            <span class="accom-badge-cute">🧸 Para 4-6 Pax</span>
+          </div>
+          <div class="accom-body">
+            <span class="accom-japanese-tag">家族 • Familias con Niños</span>
+            <h3>Especial Familias</h3>
+            <div class="accom-price-line">180 € - 280 € / noche (Total Familia)</div>
+            <p class="accom-desc">Apartahoteles con cocina integrada, lavadora, camas individuales para cada miembro y ambiente seguro cerca de parques y tiendas Konbini.</p>
+            <ul class="accom-features">
+              <li>🌸 Capacidad real para familias completas</li>
+              <li>🌸 Cocina y lavadora en habitación</li>
+              <li>🌸 Política adaptada a niños y bebés</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Consejo Omotenashi -->
+        <div class="accom-card" style="background: #FFFDF9; border: 1.5px dashed #F59F00;">
+          <div class="accom-body" style="justify-content: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">🏮</div>
+            <h3 style="color: #7D5A00; margin-bottom: 0.35rem;">Consejo de Horizonte</h3>
+            <p style="font-size: 0.85rem; color: #786F66; line-height: 1.55; margin-bottom: 1rem;">
+              En Japón las tasas de baño (*onsen tax*) y pernoctación pueden devengarse en destino. Nosotros te desglosamos cada partida en la propuesta formal para que tu viaje transcurra con total serenidad.
+            </p>
+            <a href="#contacto" class="btn btn-secondary btn-sm" style="align-self: flex-start;">Consultar con un Asesor 🌸</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner de Etiqueta Onsen -->
+      <div class="onsen-etiquette-box">
+        <div>
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">♨️</div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Etiqueta del Onsen</h4>
+          <p style="font-size: 0.82rem; color: #786F66;">El baño termal japonés es un ritual de purificación y relajación.</p>
+        </div>
+        <div class="onsen-rules-grid">
+          <div class="onsen-rule-item">
+            <h5>1. Lavado previo siempre 🚿</h5>
+            <p>Se utiliza el taburete y jabón para ducharse a fondo antes de entrar al agua termal.</p>
+          </div>
+          <div class="onsen-rule-item">
+            <h5>2. Sin bañador ni toalla 🧖‍♀️</h5>
+            <p>Se accede descalzo y sin ropa; la toallita pequeña se coloca sobre la cabeza al sumergirse.</p>
+          </div>
+          <div class="onsen-rule-item">
+            <h5>3. Tatuajes y privacidad 🌸</h5>
+            <p>Si llevas tatuajes, te reservamos ryokans con onsen privado para que disfrutes sin ninguna restricción.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN GUÍA RAG & REQUISITOS (Secciones 4, 5, 9, 10 del PDF) -->
+  <section class="section" style="background: #FFFDF9; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" id="guia-rag">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subheading">📜 Saber Antes de Viajar</span>
+        <h2>Guía Práctica, Requisitos y Normativa</h2>
+        <p>Toda la información verificada según fuentes oficiales del MAEC y el protocolo operativo de Horizonte a Medida Viajes.</p>
+      </div>
+
+      <!-- Acordeón interactivo de FAQS -->
+      <div class="rag-accordion" id="ragAccordion">
+        <!-- Generado por app.js -->
+      </div>
+
+      <!-- Tabla de Política de Cancelación (Sección 9 del PDF) -->
+      <div class="cancellation-wrap">
+        <h4 style="font-size: 1.05rem; margin-bottom: 0.25rem;">Escala Orientativa de Cancelación</h4>
+        <p style="font-size: 0.82rem; color: #786F66;">Aplicable según las directrices operativas de la agencia cuando el proveedor no fije otra condición específica:</p>
+        
+        <table class="cancellation-table">
+          <thead>
+            <tr>
+              <th>Antelación de la Cancelación</th>
+              <th>Gastos Orientativos sobre Servicios Cancelables</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Más de 60 días antes de la salida</strong></td>
+              <td>10 % de gastos de gestión más los gastos ya incurridos.</td>
+            </tr>
+            <tr>
+              <td><strong>Entre 31 y 60 días antes</strong></td>
+              <td>25 % más gastos ya incurridos.</td>
+            </tr>
+            <tr>
+              <td><strong>Entre 15 y 30 días antes</strong></td>
+              <td>50 % más gastos ya incurridos.</td>
+            </tr>
+            <tr>
+              <td><strong>14 días o menos / No presentación</strong></td>
+              <td>Hasta el 100 % del importe de los servicios contratados.</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p style="font-size: 0.74rem; color: #786F66; margin-top: 0.75rem;">
+          * Siempre incluimos en tu pack seguro de viaje con amplia cobertura de cancelación justificada para proteger tu inversión.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN FORMULARIO: TABLILLA EMA DE DESEOS DE VIAJE (絵馬) -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="ema-sanctuary-wrap">
+        <div class="ema-knot-top">🎋</div>
+        <div class="ema-header">
+          <span class="hanko-badge" style="margin-bottom: 0.5rem;">Tablilla Votiva Ema (絵馬)</span>
+          <h3>Cuelga tu deseo de viajar a Japón</h3>
+          <p style="font-size: 0.9rem; color: #786F66; max-width: 520px; margin: 0 auto;">
+            Cuéntanos tus fechas e ideas preliminares. Un asesor de Horizonte revisará tus datos y preparará tu propuesta formal a medida con hospitalidad Omotenashi.
+          </p>
+        </div>
+
+        <form id="travelRequestForm">
+          <div class="form-field">
+            <label for="formName">Nombre y Apellidos *</label>
+            <input type="text" id="formName" class="form-input" placeholder="Ej. Ana Martínez" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-field">
+              <label for="formEmail">Correo Electrónico *</label>
+              <input type="email" id="formEmail" class="form-input" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-field">
+              <label for="formPhone">Teléfono / WhatsApp *</label>
+              <input type="tel" id="formPhone" class="form-input" placeholder="+34 600 000 000" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-field">
+              <label for="formDates">Fechas Previstas o Mes *</label>
+              <input type="text" id="formDates" class="form-input" placeholder="Ej. Octubre 2026 (10 días)" required>
+            </div>
+            <div class="form-field">
+              <label for="formPax">Número de Viajeros *</label>
+              <select id="formPax" class="form-select" required>
+                <option value="2 Adultos (Pareja)">2 Adultos (Pareja)</option>
+                <option value="1 Viajero Individual">1 Viajero Individual</option>
+                <option value="3-4 Adultos (Amigos)">3-4 Adultos (Amigos)</option>
+                <option value="Familia con niños">Familia con niños</option>
+                <option value="Grupo privado (+5 pax)">Grupo privado (+5 personas)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="formStyle">Estilo de Alojamiento Preferido *</label>
+            <select id="formStyle" class="form-select">
+              <option value="Confort (3-4* con Ryokan)">Confort (3-4* con noche en Ryokan) - Recomendado 🌸</option>
+              <option value="Premium (4-5* superior)">Premium (4-5* con vistas panorámicas)</option>
+              <option value="Esencial / Económico">Esencial (Optimizar presupuesto)</option>
+              <option value="Lujo & Tradición">Lujo exclusivo & Ryokan de autor</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="formNotes">Detalles Especiales o Deseos</label>
+            <textarea id="formNotes" class="form-textarea" rows="3" placeholder="Indica ciudad de salida en España, si tenéis alergias, si es luna de miel, o si tenéis ilusión por anime, gastronomía o templos..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 0.95rem;">
+            Colgar Mi Deseo & Recibir Propuesta Gratuita 🎋
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASISTENTE VIRTUAL IA AIKO-CHAN (WIDGET FLOTANTE) -->
+  <div class="chatbot-launcher">
+    <button class="chatbot-btn" id="chatLauncherBtn" aria-label="Abrir chat con Aiko-chan">
+      <span>🌸</span>
+      <span class="chatbot-badge-live"></span>
+    </button>
+  </div>
+
+  <div class="chatbot-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-user-box">
+        <div class="chat-avatar-cute">🌸</div>
+        <div>
+          <h4>Aiko-chan (あいこ)</h4>
+          <span>● En línea | Asesora IA</span>
+        </div>
+      </div>
+      <button class="chat-close-btn" id="chatCloseBtn" aria-label="Cerrar chat">✕</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessagesContainer">
+      <!-- Mensajes dinámicos generados por app.js -->
+    </div>
+
+    <!-- Sugerencias rápidas -->
+    <div class="chat-quick-pills" id="chatQuickPills">
+      <!-- Generado dinámicamente -->
+    </div>
+
+    <div class="chat-input-bar">
+      <input type="text" id="chatInputField" class="chat-input-field" placeholder="Pregúntale a Aiko-chan...">
+      <button class="chat-send-btn" id="chatSendBtn" aria-label="Enviar mensaje">➤</button>
+    </div>
+  </div>
+
+  <!-- FOOTER MINIMALISTA JAPONÉS -->
+  <footer class="minimal-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="brand-hanko">旅</div>
+            <div class="brand-text">
+              <span class="brand-title">HORIZONTE A MEDIDA</span>
+              <span class="brand-sub">日本への旅</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.6; color: #786F66; margin-bottom: 1rem;">
+            Agencia B2C especializada en el diseño y venta de viajes personalizados a Japón para viajeros individuales, parejas, familias y grupos privados con salidas desde España.
+          </p>
+          <div style="font-size: 0.78rem; color: #786F66;">
+            Registro Oficial: CICMA 4892 • Hospitalidad Omotenashi
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Rutas & Experiencias</h4>
+          <ul class="footer-links">
+            <li><a href="#itinerario">🌸 Itinerario Japón en 10 Días</a></li>
+            <li><a href="#variantes">⛩️ Variante Más Cultura & Uji</a></li>
+            <li><a href="#variantes">🧸 Variante Familias & Ghibli</a></li>
+            <li><a href="#variantes">🍣 Variante Foodie & Sake</a></li>
+            <li><a href="#variantes">🎮 Variante Anime & Arcades</a></li>
+            <li><a href="#alojamientos">♨️ Noche en Ryokan Tradicional</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Normativa & Garantías</h4>
+          <ul class="footer-links">
+            <li><a href="#guia-rag">🛂 Requisitos y Visit Japan Web</a></li>
+            <li><a href="#guia-rag">💊 Salud y Seguro Médico</a></li>
+            <li><a href="#guia-rag">📦 Maletas con Takkyubin</a></li>
+            <li><a href="#guia-rag">📜 Condiciones de Cancelación</a></li>
+            <li><a href="#proceso">🎐 Las 6 Fases de Planificación</a></li>
+            <li><a href="#cotizador">🧮 Calculadora de Presupuesto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Canales de Atención</h4>
+          <ul class="footer-links" style="color: #2D2825;">
+            <li>📞 Teléfono: <a href="tel:+34910234567" style="color: #E03131; font-weight: 600;">+34 910 234 567</a></li>
+            <li>💬 WhatsApp: <a href="https://wa.me/34622987654" style="color: #2B8A3E; font-weight: 600;">+34 622 987 654</a></li>
+            <li>✉️ Correo: hola@horizontemedida.com</li>
+            <li>🕒 L-V 09:00 - 19:00 | Sáb 10:00 - 14:00</li>
+            <li>🍵 <strong>Asistencia 24 Horas</strong> durante el viaje</li>
+            <li>📍 Madrid, España (Videollamada con cita previa)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Horizonte a Medida Viajes S.L. • 一期一会 (Ichigo Ichie)
+        </div>
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="#" style="color: #786F66; text-decoration: none;">Aviso Legal</a>
+          <a href="#" style="color: #786F66; text-decoration: none;">Privacidad</a>
+          <a href="#" style="color: #786F66; text-decoration: none;">Condiciones de Viaje</a>
+          <a href="#" style="color: #786F66; text-decoration: none;">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
